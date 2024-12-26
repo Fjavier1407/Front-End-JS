@@ -10,7 +10,7 @@ html, body {
 header {
     height: 90px;
    
-    background-color: rgb(24,63,117);
+    background-color: rgb(24,63,117) !important;
 }
 
 body {
@@ -23,9 +23,14 @@ main {
     flex: 1;
 }
 
+li.nav-item{
+    font-family: 'Crimson Pro';
+    font-size: x-large;
+    text-decoration: none;
+}
 
 h1,
-h2{
+h2, h5{
     font-family: 'Crimson Pro';
     font-weight: 400;
 }
@@ -359,6 +364,41 @@ fieldset {
     background-size: cover; 
 }
 
+a.nav-link{
+    color: #e0edff;
+}
+.carousel-item {
+    min-height: 400px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5{
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: 10px auto;
+    font-size: 25px;
+
+}
+
+.carousel-inner::before{
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
 @media all and (max-width: 599px) {
     header {
@@ -369,7 +409,24 @@ fieldset {
         align-items: center;
         text-align: center;
     }
-   
+    .carousel-item{
+        min-height: 500px;
+    }
+    .carousel-item img {
+        height: 500px;
+    }
+    .carousel-caption {
+        bottom: 30px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 50px;
+        margin-top: 0;
+    }
+    .carousel-caption p {
+        width: 100%;
+        font-size: 16px;
+    }
 
     #LogoPrincipal {
         display: flex;
@@ -507,6 +564,8 @@ fieldset {
    
 }
 
+
+
 @media all and (min-width: 620px) and (max-width: 1023px) {
     header {
         height: 100px;
@@ -567,7 +626,24 @@ fieldset {
     article.tarjeta {
         margin: 0;
     }
+    .carousel-item{
+        min-height: 500px;
+    }
+    .carousel-item img {
+        height: 500px;
+    }
+    .carousel-caption {
+        bottom: 30px;
+    }
 
+    .carousel-caption h5 {
+        font-size: 50px;
+        margin-top: 0;
+    }
+    .carousel-caption p {
+        width: 100%;
+        font-size: 16px;
+    }
 
     
     
