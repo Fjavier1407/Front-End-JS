@@ -18,7 +18,7 @@
       "id": 3,
       "titulo": "Camiseta 3",
       "precio": "150.000"
-    }
+    },
     {
       "imagen": "Front-End-JS/img/camiseta4.jpg",
       "id": 4,
@@ -37,7 +37,7 @@
       "id": 6,
       "titulo": "Camiseta 6",
       "precio": "45.000"
-    }
+    },
     {
       "imagen": "Front-End-JS/img/camiseta7.jpg",
       "id": 7,
