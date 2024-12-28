@@ -1,20 +1,20 @@
 {
   "productos": [
     {
-      "imagen": "img/camiseta1.jpg",
+      "imagen": "/img/camiseta1.jpg",
       "id": 1,
       "titulo": "Camiseta 1",
       "precio": "$35.000"
       
     },
     {
-     "imagen": "img/camiseta2.jpg",
+     "imagen": "/img/camiseta2.jpg",
       "id": 2,
       "titulo": "Camiseta 2",
       "precio": "$25.000"
     },
     {
-       "imagen": "img/camiseta3.jpg",
+       "imagen": "/img/camiseta3.jpg",
       "id": 3,
       "titulo": "Camiseta 3",
       "precio": "$15.000"
