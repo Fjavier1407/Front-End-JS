@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Totodile Camiseta </title>
+        <link rel="shortcut icon" href="../img/totodile.png"> 
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_on" />
+        <script src="https://kit.fontawesome.com/a0628113ef.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <header>
+            <div id="LogoPrincipal">
+                <a href="../index.html">
+                    <img src="../img/logo.jpg" alt="Logo Totodile Camisetas" height="70px">
+                </a>
+            </div>
+            <nav id="botonera_principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="camisetas.html">Camisetas</a></li>
+                    <li><a href="resenas.html">Reseñas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="formulario">
+           
+            <section>
+                <article >
+                    <form action="https://formspree.io/f/xkgnbaqj" method="post" class="fondoformu">
+                        <div class="overlay">
+                        <fieldset>
+                            <legend><b>Datos de Contacto</b></legend>
+            
+                            <div id="contentedorcampos"> 
+                                <article class="camposFormu">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="" name="nombre" size="30" maxlength="15" required>
+                                    <br><br>
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" id="" name="apellido" size="30" maxlength="15" required>
+                                    <br><br>
+                                    <label for="correo">E-mail</label>
+                                    <input type="email" name="email" id="" size="32">
+                                    <br><br>
+                                   
+                                </article>
+            
+                                <div>
+                                    <label for="comentarios">Escriba su consulta</label> <br>
+                                    <textarea name="message" id="comentarios" cols="30" rows="10" placeholder="Escriba aquí su consulta (max 300 caracteres)" style="resize: none;"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div id="btnFormu">
+                            <input type="submit" value="Enviar Datos">
+                            <input type="reset" value="Borrar">
+                        </div>
+                    </div>
+                       
+                    </form>
+                </article>
+            </section>
+            
+        </main>
+        <footer>
+            <div id="datos">
+              <div id="LogoSecundario">
+                  <a href="../index.html">
+                      <img src="../img/totodile.png" alt="Logo Totodile Camisetas" height="30px">
+                  </a>
+                  <h2 id="TituloFooter">Totodile Camisetas</h2>
+              </div>
+              <p><i class="fa-sharp fa-solid fa-thumbtack"></i> Donovan y Camino Gral Chamizo, Gerli</p>
+              <p><i class="fa-sharp fa-solid fa-envelope"></i> contacto@totodile.com.ar</p>
+          </div>
+          </footer>
+    </body>
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+      </script>
+</html>
