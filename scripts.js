@@ -4,7 +4,7 @@ let productos = [];
 fetch("./db.json")
     .then(response => response.json())
     .then(data => {
-        productos = data;
+        productos = data.producto;
         cargarProductos(productos);  
     });
 
