@@ -40,6 +40,7 @@ function cargarProductos(productosElegidos) {
             </div>
         `;
         contenedorProductos.appendChild(div);
+        console.log("Productos:", productos);
     });
     actualizarBotonesAgregar();
 }
