@@ -1,13 +1,10 @@
 let productos = [];
 
-fetch("https://cors-anywhere.herokuapp.com/https://my-json-server.typicode.com/Fjavier1407/Front-End-JS")
+fetch("./productos.json")
     .then(response => response.json())
     .then(data => {
         productos = data;
-        cargarProductos(productos);
-    })
-    .catch(error => {
-        console.error("Error al cargar los productos:", error);
+        cargarProductos(productos);  
     });
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
