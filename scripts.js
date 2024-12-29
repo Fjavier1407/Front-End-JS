@@ -63,21 +63,6 @@ function agregarAlCarrito(e) {
     actualizarNumerito();  
     cargarProductosCarrito();
 
-    Toastify({
-        text: "Producto agregado al carrito",
-        duration: 30000,
-        close: true,
-        gravity: "top",
-        position: "right",
-        stopOnFocus: true,
-        style: {
-            background: "linear-gradient(to right, #4b33a8, #785ce9)",
-            borderRadius: "2rem",
-            textTransform: "uppercase",
-            fontSize: ".75rem"
-        },
-        offset: { x: '6.5rem', y: '6.5rem' },
-    }).showToast();
 }
 
 
