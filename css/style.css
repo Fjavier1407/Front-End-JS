@@ -219,7 +219,7 @@ h2#TituloContacto{
     transition: background-color 0.3s ease;
 }
 
-.carrito-acciones-derecha button{
+.carrito-acciones-comprar button{
     background-color: green;
     color: white;
     font-family: inherit;
