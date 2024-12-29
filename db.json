@@ -4,58 +4,58 @@
       "imagen": "img/camiseta1.jpg",
       "id": "1",
       "titulo": "Camiseta 1",
-      "precio": "35.000"
+      "precio": "35000"
       
     },
     {
      "imagen": "img/camiseta2.jpg",
       "id": "2",
       "titulo": "Camiseta 2",
-      "precio": "20.000"
+      "precio": "20000"
     },
     {
        "imagen": "img/camiseta3.jpg",
       "id": "3",
       "titulo": "Camiseta 3",
-      "precio": "150.000"
+      "precio": "150000"
     },
     {
       "imagen": "img/camiseta4.jpg",
       "id": "4",
       "titulo": "Camiseta 4",
-      "precio": "5.000"
+      "precio": "5000"
       
     },
     {
      "imagen": "img/camiseta5.jpg",
       "id": "5",
       "titulo": "Camiseta 5",
-      "precio": "25.000"
+      "precio": "25000"
     },
     {
        "imagen": "img/camiseta6.jpg",
       "id": "6",
       "titulo": "Camiseta 6",
-      "precio": "45.000"
+      "precio": "45000"
     },
     {
       "imagen": "img/camiseta7.jpg",
       "id": "7",
       "titulo": "Camiseta 7",
-      "precio": "50.000"
+      "precio": "50000"
       
     },
     {
      "imagen": "img/camiseta8.jpg",
       "id": "8",
       "titulo": "Camiseta 8",
-      "precio": "65.000"
+      "precio": "65000"
     },
     {
        "imagen": "img/camiseta9.jpg",
       "id": "9",
       "titulo": "Camiseta 9",
-      "precio": "70.000"
+      "precio": "70000"
     }
   ]
 }
