@@ -86,9 +86,9 @@ li.nav-itemCart {
 }
 
 .carousel-caption p{
-    width: 60%;
+    
     margin: 10px auto;
-    font-size: 25px;
+    
 
 }
 a.btn.btn-primary.mt-3 {
@@ -348,10 +348,7 @@ section {
     margin-bottom: 50px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 section {
     overflow: hidden;
 }
