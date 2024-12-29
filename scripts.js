@@ -62,6 +62,7 @@ function agregarAlCarrito(e) {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     actualizarNumerito();  
     cargarProductosCarrito();
+    alert("Producto agregado al carrito!");
 
 }
 
@@ -143,6 +144,7 @@ function actualizarBotonesEliminar() {
                 
                 actualizarNumerito();
                 cargarProductosCarrito();
+                alert("Producto eliminado del carrito!");
             }
         });
     });
@@ -154,6 +156,7 @@ botonVaciar.addEventListener("click", () => {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));  
     actualizarNumerito();  
     cargarProductosCarrito();  
+    alert("Carrito Vacio!");
 });
 
 
