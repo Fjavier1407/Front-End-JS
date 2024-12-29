@@ -22,7 +22,12 @@ body {
 main {
     flex: 1;
 }
-
+p {
+    margin-top: 0;
+    /* margin-bottom: 1rem; */
+    margin-bottom: 0;
+    }
+    
 
 h1,
 h2{
@@ -42,6 +47,90 @@ h2{
 #fotoPrincipal {
     width: 40%;
     height: auto;
+}
+.carrito-icono{
+    font-size: 25px;
+    color: rgb(277, 6, 19);
+    text-decoration:none;
+}
+span#numerito{
+    margin-left:5px;
+    padding: 8px;
+}
+#navbarNav{
+    font-family: 'Crimson Pro';
+    font-size: 25px;
+    color: #fff;
+}
+li.nav-itemCart {
+    padding: 8px;
+}
+
+.navbar a {
+    font-weight: 600;
+}
+.carousel-item {
+    min-height: 400px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5{
+    font-family: 'Crimson Pro';
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: 10px auto;
+    font-size: 25px;
+
+}
+a.btn.btn-primary.mt-3 {
+    background-color: rgb(24,63,117);
+    border-color: rgb(24,63,117);   
+    color:#fff;
+}
+h2#TituloContacto{
+    color: rgb(277, 6, 19);
+}
+
+.carousel-inner::before{
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.section-header.text-center.pb-2.pb-lg-5{
+    padding-bottom:0 !important;
+}
+
+
+.justify-content-center {
+    text-align: -webkit-center;
+}
+.card img{
+    width: 200px;
+    height: 200px;
+}
+.card-body{
+    text-align: center;
+}
+
+
+.resenas .card{
+    background-color:#EAE5DF;
+    border-radius: 5%;
+    margin: 10px;
 }
 
 
@@ -94,7 +183,7 @@ Fieldset {
 }
 
 #datos {
-    margin: 10px;
+    /*margin: 10px;*/
     align-content: baseline;
 }
 
@@ -165,6 +254,13 @@ footer {
 .fa-sharp.fa-solid.fa-envelope {
     color: rgb(277, 6, 19);
 }
+#formulario,
+#productos,
+#resena{
+    height: 100vh;
+}
+
+
 
 #formulario {
     background-image: url("../img/fondoFormu.jpg");
@@ -177,8 +273,11 @@ footer {
     padding: 20px;
     margin: 10px; 
     box-sizing: border-box;
+    height: 100vh;
 }
-
+.contacto{
+    margin-top: 100px;
+}
 article.camposFormu {
     align-self: center;
 }
@@ -187,9 +286,10 @@ article.camposFormu {
     background-color: rgba(255, 255, 255, 0.89);
     padding: 20px;
     border-radius: 8px;
-    width: 100%;
+    
     box-sizing: border-box; 
     max-width: 900px;
+    
 }
 
 fieldset {
@@ -567,10 +667,4 @@ fieldset {
     article.tarjeta {
         margin: 0;
     }
-
-
-    
-    
-
-
 }
