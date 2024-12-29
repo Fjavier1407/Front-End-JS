@@ -76,7 +76,9 @@ li.nav-itemCart {
     bottom: 220px;
     z-index: 2;
 }
-
+p.carrito-vacio{
+    color:#aecbf5;
+}
 
 .carousel-caption h5{
     font-family: 'Crimson Pro';
