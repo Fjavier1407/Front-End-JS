@@ -65,7 +65,7 @@ function agregarAlCarrito(e) {
 
     Toastify({
         text: "Producto agregado al carrito",
-        duration: 3000,
+        duration: 30000,
         close: true,
         gravity: "top",
         position: "right",
@@ -76,7 +76,7 @@ function agregarAlCarrito(e) {
             textTransform: "uppercase",
             fontSize: ".75rem"
         },
-        offset: { x: '1.5rem', y: '1.5rem' },
+        offset: { x: '6.5rem', y: '6.5rem' },
     }).showToast();
 }
 
