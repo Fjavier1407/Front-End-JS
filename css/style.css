@@ -54,13 +54,13 @@ h2{
     text-decoration:none;
 }
 span#numerito{
-    margin-left:5px;
-    padding: 8px;
+    display:none;
 }
 #navbarNav{
     font-family: 'Crimson Pro';
     font-size: 25px;
     color: #fff;
+    
 }
 li.nav-itemCart {
     padding: 8px;
