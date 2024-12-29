@@ -243,25 +243,20 @@
                        
                     </form>
                     <script>
-                    // Función para validar el formulario
 function validarFormulario(event) {
-    // Prevenir el envío del formulario hasta que se validen los campos
     event.preventDefault();
 
-    // Obtener los valores de los campos
     const nombre = document.querySelector('input[name="nombre"]');
     const apellido = document.querySelector('input[name="apellido"]');
     const email = document.querySelector('input[name="email"]');
     const mensaje = document.querySelector('textarea[name="message"]');
 
-    // Validar que los campos "Nombre", "Apellido", "Email" y "Mensaje" no estén vacíos
     if (!nombre.value.trim() || !apellido.value.trim() || !email.value.trim() || !mensaje.value.trim()) {
         alert("Todos los campos son obligatorios.");
         return false;
     }
 
-    // Validar que "Nombre" y "Apellido" solo contengan letras y espacios (sin números ni caracteres especiales)
-    const regexNombreApellido = /^[a-zA-Z\s]+$/;  // Solo letras y espacios
+    const regexNombreApellido = /^[a-zA-Z\s]+$/;  
     if (!regexNombreApellido.test(nombre.value)) {
         alert("El nombre solo debe contener letras y espacios.");
         nombre.focus();
@@ -282,12 +277,10 @@ function validarFormulario(event) {
         return false;
     }
 
-    // Si todo está correcto, enviar el formulario
     alert("Formulario enviado con éxito!");
-    event.target.submit(); // Enviar el formulario
+    event.target.submit(); 
 }
 
-// Asignar la función de validación al evento submit del formulario
 document.querySelector('form').addEventListener('submit', validarFormulario);
 </script>
 				</div>
