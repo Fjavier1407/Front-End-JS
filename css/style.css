@@ -343,11 +343,24 @@ footer {
 .fa-sharp.fa-solid.fa-envelope {
     color: rgb(277, 6, 19);
 }
+
+section {
+    margin-bottom: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+section {
+    overflow: hidden;
+}
 #carrito,
 #formulario,
 #productos,
 #resenas{
     height: 100vh;
+    height: auto;
 }
 
 
@@ -559,7 +572,9 @@ fieldset {
         align-items: center;
         text-align: center;
     }
-   
+    section {
+        margin-bottom: 80px; /* Espacio adicional */
+    }
 
     #LogoPrincipal {
         display: flex;
