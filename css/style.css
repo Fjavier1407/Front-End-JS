@@ -221,7 +221,7 @@ h2#TituloContacto{
     transition: background-color 0.3s ease;
 }
 
-.carrito-acciones-comprar button{
+button.carrito-acciones-comprar{
     background-color: green;
     color: white;
     font-family: inherit;
@@ -233,6 +233,9 @@ h2#TituloContacto{
     font-size: 1em;
     font-weight: 400;
     transition: background-color 0.3s ease;
+}
+.carrito-acciones-total{
+    color:#aecbf5;
 }
 
 .slider-container {
