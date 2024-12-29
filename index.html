@@ -6,7 +6,7 @@
         <title>Totodile Camisetas</title>
         <link rel="shortcut icon" href="img/totodile.png"> 
 
-        <link rel="stylesheet" href="css/style.css">
+        
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_on" />
         <script src="https://kit.fontawesome.com/a0628113ef.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        
+        <link rel="stylesheet" href="css/style.css">
 	
     </head>
     <body>
@@ -38,8 +38,8 @@
                       <li class="nav-item">
                         <a class="nav-link" href="#formulario">Contacto</a>
                       </li>
-			    <li class="nav-item">
-                        			    <a class='carrito-icono' href='#carrito'><i class="bi bi-cart-fill"></i><span id="numerito">0</span></a>
+			    <li class="nav-itemCart">
+                        			    <a class='carrito-icono' href='#carrito'><i class="fa-regular fa-cart-shopping"></i><span id="numerito">0</span></a>
 
                       </li>
                     </ul>
@@ -63,7 +63,7 @@
                             <div class="carousel-caption">
                                 <h5>Totodile Camisetas</h5>
                                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque corrupti,ipsa blanditiis exercitationem eius dolorem reprehenderit voluptas libero tempore, voluptatibus ut necessitatibus iure id fugit voluptatum nulla rem quo.</p>
-                                <p><a class="btn btn-primary mt-3" href="/#contacto">¡Contactanos!</a></p>
+                                <p><a class="btn btn-primary mt-3" href="#formulario">¡Contactanos!</a></p>
                             </div>
                         </div>
                         <div class="carousel-item active">
@@ -72,7 +72,7 @@
                                 <h5>Totodile Camisetas</h5>
                                 
                                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque corrupti, ipsa blanditiis exercitationem eius dolorem reprehenderit voluptas libero tempore, voluptatibus ut necessitatibus iure id fugit voluptatum nulla rem quo.</p>
-                                <p><a class="btn btn-primary mt-3" href="/#contacto">¡Contactanos!</a></p>
+                                <p><a class="btn btn-primary mt-3" href="/#formulario">¡Contactanos!</a></p>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -81,7 +81,7 @@
                                 <h5>Totodile Camisetas</h5>
                                 
                                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque corrupti, ipsa blanditiis exercitationem eius dolorem reprehenderit voluptas libero tempore, voluptatibus ut necessitatibus iure id fugit voluptatum nulla rem quo.</p>
-                                <p><a class="btn btn-primary mt-3" href="/#contacto">¡Contactanos!</a></p>
+                                <p><a class="btn btn-primary mt-3" href="/#formulario">¡Contactanos!</a></p>
                             </div>
                         </div>
                     </div>
@@ -197,18 +197,19 @@
 	<section id="formulario" class="formulario">
 		<div class="container mb-3 mb-lg-5">
 
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-header text-center pb-2 pb-lg-5">
-						<h2>Contacto</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Lorem ipsum dolor sit amet.</p>
-					</div>
-				</div>
-			</div>
+			
 
 			<div class="d-flex justify-content-center">
 				<div class="col-12 col-md-12-col-lg-6 pt-4 pb-4">
 					<form action="https://formspree.io/f/xkgnbaqj" method="post" class="fondoformu">
+                        <div class="row">
+				<div class="col-md-12">
+					<div class="section-header text-center pb-2 pb-lg-5">
+						<h2 id="TituloContacto">Contacto</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+			</div>
                         <div class="overlay">
                         <fieldset>
                             <legend><b>Datos de Contacto</b></legend>
@@ -240,6 +241,54 @@
                     </div>
                        
                     </form>
+                    <script>
+                    // Función para validar el formulario
+function validarFormulario(event) {
+    // Prevenir el envío del formulario hasta que se validen los campos
+    event.preventDefault();
+
+    // Obtener los valores de los campos
+    const nombre = document.querySelector('input[name="nombre"]');
+    const apellido = document.querySelector('input[name="apellido"]');
+    const email = document.querySelector('input[name="email"]');
+    const mensaje = document.querySelector('textarea[name="message"]');
+
+    // Validar que los campos "Nombre", "Apellido", "Email" y "Mensaje" no estén vacíos
+    if (!nombre.value.trim() || !apellido.value.trim() || !email.value.trim() || !mensaje.value.trim()) {
+        alert("Todos los campos son obligatorios.");
+        return false;
+    }
+
+    // Validar que "Nombre" y "Apellido" solo contengan letras y espacios (sin números ni caracteres especiales)
+    const regexNombreApellido = /^[a-zA-Z\s]+$/;  // Solo letras y espacios
+    if (!regexNombreApellido.test(nombre.value)) {
+        alert("El nombre solo debe contener letras y espacios.");
+        nombre.focus();
+        return false;
+    }
+
+    if (!regexNombreApellido.test(apellido.value)) {
+        alert("El apellido solo debe contener letras y espacios.");
+        apellido.focus();
+        return false;
+    }
+
+    // Validar el formato del "Email"
+    const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!regexEmail.test(email.value)) {
+        alert("Por favor, ingrese un email válido.");
+        email.focus();
+        return false;
+    }
+
+    // Si todo está correcto, enviar el formulario
+    alert("Formulario enviado con éxito!");
+    event.target.submit(); // Enviar el formulario
+}
+
+// Asignar la función de validación al evento submit del formulario
+document.querySelector('form').addEventListener('submit', validarFormulario);
+</script>
 				</div>
 
 			</div>
@@ -258,6 +307,12 @@
               <p><i class="fa-sharp fa-solid fa-envelope"></i> contacto@totodile.com.ar</p>
           </div>
           </footer>
+
+
+
+
+
+
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 	      	<script src="scripts.js"></script>
